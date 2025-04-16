@@ -12,3 +12,9 @@ const val ROUT_ASSIGN = "assign"
 const val ROUT_FORM = "form"
 const val ROUT_FORM1 = "form1"
 
+
+//Authentication
+const val ROUT_REGISTER = "Register"
+const val ROUT_LOGIN = "Login"
+
+
