@@ -6,7 +6,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.model.User
 
-
+// Interacts with the database directly
 
 @Dao
 interface UserDao {

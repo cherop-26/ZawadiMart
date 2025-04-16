@@ -54,7 +54,8 @@ fun LoginScreen(
                     navController.navigate(ROUT_ITEM) {
                     }
                 } else {
-                    navController.navigate(ROUT_DASH) {
+                    navController.navigate(ROUT_DASH) { // use "when" function if conditions are many
+
                     }
                 }
             }
@@ -133,7 +134,7 @@ fun LoginScreen(
             Button(
                 onClick = {
                     if (email.isBlank() || password.isBlank()) {
-                        Toast.makeText(context, "Please enter email and password", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "Please enter email and password", Toast.LENGTH_SHORT).show() // when condition is not met
                     } else {
                         authViewModel.loginUser(email, password)
                     }

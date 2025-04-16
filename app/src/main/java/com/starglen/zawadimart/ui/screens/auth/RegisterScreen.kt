@@ -179,7 +179,7 @@ fun RegisterScreen(
                 .height(50.dp)
                 .background(
                     brush = Brush.horizontalGradient(
-                        colors = listOf(Color(0xFF00C6FF), Color(0xFF0072FF))
+                        colors = listOf(Color(0xFF00C6FF), Color(0xFF0072FF)) // to have several colors on a button for a hovering effect
                     ),
                     shape = MaterialTheme.shapes.medium
                 ),
@@ -188,9 +188,9 @@ fun RegisterScreen(
             Button(
                 onClick = {
                     if (username.isBlank() || email.isBlank() || password.isBlank() || confirmPassword.isBlank()) {
-                        Toast.makeText(context, "All fields are required", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "All fields are required", Toast.LENGTH_SHORT).show() //to display a message before an action is taken ,,length is for the duration for display of the message
                     } else if (password != confirmPassword) {
-                        Toast.makeText(context, "Passwords do not match", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "Passwords do not match", Toast.LENGTH_SHORT).show()  //for emoji window and full stop
                     } else {
                         authViewModel.registerUser(User(username = username, email = email, role = role, password = password))
                         onRegisterSuccess()
@@ -208,7 +208,7 @@ fun RegisterScreen(
         TextButton(
             onClick = { navController.navigate(ROUT_LOGIN) }
         ) {
-            Text("Already have an account? Login")
+            Text("Already have an account? Login") // Clickable text
         }
     }
 }
